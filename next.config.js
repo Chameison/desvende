@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
-
+const nextConfig = {
+    images:{
+        unoptimized: true,
+        domains:['maps.googleapis.com']
+    }
+}
 module.exports = nextConfig
