@@ -2,8 +2,6 @@
 
 import Hero from '@/components/Hero'
 import PlaceList from '@/components/PlaceList'
-import { Place } from '@/types/type'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
 export default function Home() {
