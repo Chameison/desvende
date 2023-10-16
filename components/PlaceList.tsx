@@ -3,31 +3,17 @@ import React, { useEffect, useState } from "react";
 import PlaceItemCard from "./PlaceItemCard";
 import SlideDrawer from "./SlideDrawer";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import Skelton from "./Skelton";
 
 interface PlaceListProps {
   placeList: Place[];
 }
 function PlaceList({ placeList }: PlaceListProps) {
   const [selectedPlace, setSelectedPlace] = useState<any>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Fetch the place list data
-    // Once the data is fetched, set isLoading to false
-    setIsLoading(false);
-  }, [placeList]);
 
   return (
     <div className="px-[10px] md:px-[10px] mt-7 z-10">
-      <h2 className="text-[20px] font-bold">Busque</h2>
-      {isLoading && (
-        <div className="w-full flex justify-center items-center mt-40 text-orange-600 ">
-          <AiOutlineLoading3Quarters
-            className="animate-spin text-2xl mx-auto"
-            size={100}
-          />
-        </div>
-      )}
+
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 ">
         {placeList.map((item, i) => (
           <div className="z-10" key={i} onClick={() => setSelectedPlace(item)}>
@@ -43,6 +29,20 @@ function PlaceList({ placeList }: PlaceListProps) {
           />
         </div>
       ) : null}
+      
+      {placeList?.length==0? <div
+        className="grid 
+        grid-cols-2 
+        md:grid-cols-3 
+        lg:grid-cols-4
+        gap-5"
+      >
+        {[1,2,3,4,5,6,7].map((item,index)=>(
+            <Skelton key={index}/>
+        ))}
+        </div>:null}
+        
+  
     </div>
   );
 }

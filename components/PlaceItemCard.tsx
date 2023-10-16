@@ -7,7 +7,7 @@ const BASE_URL_PHOTO = "https://maps.googleapis.com/maps/api/place/photo?maxwidt
 
 function PlaceItemCard({ data }: any) {
   return (
-    <div className='w-full z-10 border-[1px] 
+    <div className='w-full h-[300px] z-10 border-[1px] 
     rounded-xl shadow-md hover:scale-105 transition-all cursor-pointer'>
       {data?.photos ? <Image src={BASE_URL_PHOTO +
         "&photo_reference=" + data?.photos[0]?.photo_reference +
