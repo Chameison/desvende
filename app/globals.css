@@ -2,15 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-  
-  }
-}
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -21,3 +12,18 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+@media (max-width: 600px) {
+  .teste{
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .responsive{
+    display: none;
+  }
+}
+
+
