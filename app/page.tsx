@@ -16,7 +16,8 @@ export default function Home() {
     setPlaceList(data.response.results)
 
   }
-  console.log(placeList)
+  const GOOLE_PLACE_KEY = process.env.GOOGLE_PLACE_KEY
+  console.log(GOOLE_PLACE_KEY)
   return (
     <div>
       <Hero  userInput={(value:string)=>getPlaceList(value)}/>
