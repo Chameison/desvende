@@ -25,7 +25,7 @@ function Hero({ userInput }: HeroProps) {
           className="w-full  absolute mt-[-50px] "
         />
         <div className="mt-[70px] z-10">
-          <h2 className="text-[55px] text-[#F43C29] tracking-widest font-bold ">
+          <h2 className="text-[55px] text-[#F43C29] tracking-widest font-bold">
             ONDE VAI HOJE ?
           </h2>
           <h2 className="text-[20px]">Conheça lugares incriveis</h2>

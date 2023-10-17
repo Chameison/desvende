@@ -14,7 +14,7 @@ body {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .teste{
     display: none;
   }
