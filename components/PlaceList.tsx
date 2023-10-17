@@ -12,7 +12,7 @@ function PlaceList({ placeList }: PlaceListProps) {
   const [selectedPlace, setSelectedPlace] = useState<any>([]);
 
   return (
-    <div className="px-[10px] md:px-[10px] mt-7 z-10">
+    <div className="px-[10px] md:px-[120px] mt-7 z-10">
 
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 ">
         {placeList.map((item, i) => (

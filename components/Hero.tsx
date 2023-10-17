@@ -25,14 +25,13 @@ function Hero({ userInput }: HeroProps) {
           className="w-full  absolute mt-[-50px] "
         />
         <div className="mt-[70px] z-10">
-          <h2 className="text-[55px] text-red-600 tracking-widest font-semibold">
-            DESVENDE
+          <h2 className="text-[55px] text-[#F43C29] tracking-widest font-bold">
+            ONDE VAI HOJE ?
           </h2>
           <h2 className="text-[20px]">Conheça lugares incriveis</h2>
           <div className="mt-5 z-10 flex gap-2 items-center justify-center">
             <input
               onChange={(e) => setSearchInput(e.target.value)}
-              value={searchInput}
               type="text"
               placeholder="Pesquise qualquer lugar"
               className="z-10 bg-white p-3 border-[1px] rounded-full px-5 w-[36%] shadow-sm outline-red-300"
@@ -51,7 +50,7 @@ function Hero({ userInput }: HeroProps) {
               {category.map((item, i) => (
                 <button
                   key={i}
-                  onClick={() => handleCategoryClick(item.name)}
+                  onClick={() => userInput(item.name)}
                   className="flex items-center justify-center border-[1px] 
                   w-[60px] p-4 bg-orange-50 rounded-full z-10 text-slate-500 
                    hover:text-red-400 hover:border-red-400 hover:scale-110 cursor-pointer transition-all "
